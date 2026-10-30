@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MINHAJ</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    gap: 5px;
+}
+
+span {
+    font-size: clamp(35px, 12vw, 85px);
+    font-weight: bold;
+    color: #fff;
+    opacity: 0;
+    animation: appear 0.7s forwards,
+               glow 1.5s infinite alternate;
+    text-shadow: 0 0 10px #ff0000,
+                 0 0 25px #ff0000,
+                 0 0 50px #ff4500;
+}
+
+span:nth-child(1) { animation-delay: 0s, 1s; }
+span:nth-child(2) { animation-delay: 0.5s, 1.5s; }
+span:nth-child(3) { animation-delay: 1s, 2s; }
+span:nth-child(4) { animation-delay: 1.5s, 2.5s; }
+span:nth-child(5) { animation-delay: 2s, 3s; }
+span:nth-child(6) { animation-delay: 2.5s, 3.5s; }
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px red,
+                     0 0 20px red,
+                     0 0 40px orangered;
+    }
+    to {
+        text-shadow: 0 0 20px #ff0000,
+                     0 0 40px #ff4500,
+                     0 0 80px #ff0000,
+                     0 0 100px orange;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <span>M</span>
+    <span>I</span>
+    <span>N</span>
+    <span>H</span>
+    <span>A</span>
+    <span>J</span>
+</div>
+
+</body>
+</html>
